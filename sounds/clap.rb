@@ -16,7 +16,7 @@ out = SFREQ.times.map do |i|
   all_envs = 0
   times.each {|et| all_envs += env.run(t-et[0]) * et[1] if (t >= et[0])  }
   all_envs = [all_envs, 1].min
-  ffreq = 100 + (2000 * all_envs)
+  ffreq = 100 + (4000 * all_envs)
   out = filter.run(out, ffreq, 4) * all_envs
   out *= 0.5
 end

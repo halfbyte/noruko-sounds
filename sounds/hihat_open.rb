@@ -6,7 +6,7 @@ require 'synth_blocks'
 #
 
 SRATE = 44100
-hat = SynthBlocks::Drum::Hihat.new(SRATE)
+hat = SynthBlocks::Drum::Hihat.new(SRATE, {amp_decay: 0.5})
 
 hat.start(0.0)
 
